@@ -99,11 +99,11 @@ for i in ['card4', 'card6','P_emaildomain','M6']:
     dftest[i].fillna(dftest[i].mode()[0], inplace=True)
     df[i].fillna(df[i].mode()[0], inplace=True)
 
-dftest[c_features].isna().sum()
+# dftest[c_features].isna().sum()
 
-dftest[n_features].isna().sum()
+# dftest[n_features].isna().sum()
 
-df[n_features].isna().sum()
+# df[n_features].isna().sum()
 
 """FILLING THE NULL VALUES IN THE NUMERICAL FEATURES WITH MEAN"""
 
@@ -134,15 +134,13 @@ newdf = pd.concat([no_fraud_sample, yes_fraud], axis=0)
 y_train=newdf['isFraud']
 x_train = newdf.drop(columns = 'isFraud', axis = 1)
 
-y_train.value_counts()
+# y_train.value_counts()
 
 xtrain_col = x_train.columns
 
-xtrain_col
-
 """# **MODELS START**
 
-LOGISTIC REGRESSION
+LOGISTIC REGRESSION 
 """
 
 
@@ -224,7 +222,7 @@ y_test = lgbm.predict(dftest)
 DOWNLOADING THE TEST DATA
 """
 
-len(y_test)
+# len(y_test)
 
 id = []
 
@@ -238,5 +236,5 @@ df_pred['isFraud'] = y_test
 df_pred
 
 from google.colab import files
-df_pred.to_csv('prediction.csv')
+df_pred.to_csv('prediction.csv', index = False)
 files.download('prediction.csv')

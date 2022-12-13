@@ -1,0 +1,12 @@
+#INITIAL SETTINGS
+data_directory: drive/MyDrive/Colab Notebooks/Its_A_Fraud/prepro_withcolumndeletion.csv
+data_name: Its_A_FRAUD
+drop_columns: 295
+target_name: isFraud
+test_size: 147635
+model_name: Light Gradient Boosting Model
+
+
+#LGBM parameters
+num)iterations: 10000
+verbose: 1

@@ -18,9 +18,17 @@ import sklearn as sk
 import matplotlib.pyplot as plt
 import seaborn as sns
 import random
-from sklearn.model_selection import GridSearchCV,RandomizedSearchCV
+from sklearn.model_selection import GridSearchCV
+from sklearn.model_selection import RandomizedSearchCV
 from sklearn.ensemble import RandomForestClassifier,GradientBoostingClassifier
 from sklearn.preprocessing import LabelEncoder
+from sklearn.linear_model import LogisticRegression
+from xgboost import XGBClassifier
+from sklearn.neighbors import KNeighborsClassifier
+
+from sklearn.svm import SVC
+import lightgbm
+from lightgbm import LGBMClassifier
 
 """IMPORTING THE DATASETS"""
 
@@ -137,7 +145,7 @@ xtrain_col
 LOGISTIC REGRESSION
 """
 
-# from sklearn.linear_model import LogisticRegression
+
 # logReg_param_grid = {'C': [-4,1,2,3,4,8, 13,15],
 #               'penalty': ['l1', 'l2'],
 #               'max_iter': [100,500,1000,1500]
@@ -148,14 +156,14 @@ LOGISTIC REGRESSION
 
 """XGBOOST"""
 
-# from xgboost import XGBClassifier
+
 # xgb = XGBClassifier()
 # xgb.fit(x_train,y_train)
 # y_test = xgb.predict(dftest)
 
 """KNN """
 
-# from sklearn.neighbors import KNeighborsClassifier
+
 # kn=KNeighborsClassifier()
 # kn.fit(x_train,y_train)
 # y_test=kn.predict(dftest)
@@ -190,8 +198,8 @@ LOGISTIC REGRESSION
 
 """SVM"""
 
-# from sklearn.model_selection import RandomizedSearchCV
-# from sklearn.svm import SVC
+
+
 # svc_param_grid = {'C': [1,2,3,4,8,15],
 #                   'degree' : [3,4,5],
 #                   'tol': [1e-3, 1e-4, 1e-5]
@@ -203,8 +211,7 @@ LOGISTIC REGRESSION
 
 """LGBM"""
 
-import lightgbm
-from lightgbm import LGBMClassifier
+
 
 lgbm = LGBMClassifier(learning_rate=0.01, num_iterations=10000, num_leaves=10, baggong="bagging_fraction", reg_alpha=2, reg_lambda=5, verbose=1)
 

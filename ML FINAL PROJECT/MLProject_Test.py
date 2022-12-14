@@ -211,7 +211,7 @@ LOGISTIC REGRESSION
 
 
 
-lgbm = LGBMClassifier(learning_rate=0.01, num_iterations=10000, num_leaves=10, baggong="bagging_fraction", reg_alpha=2, reg_lambda=5, verbose=1)
+lgbm = LGBMClassifier(num_iterations=10000, verbose=1)
 
 lgbm.fit(x_train, y_train)
 

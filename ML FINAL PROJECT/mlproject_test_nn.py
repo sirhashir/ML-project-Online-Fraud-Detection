@@ -212,6 +212,7 @@ LOGISTIC REGRESSION
 # lgbm.fit(x_train, y_train)
 
 # y_test = lgbm.predict(dftest)
+"""Neural Network"""
 
 clf = MLPClassifier(solver='lbfgs', alpha=1e-5,
                     hidden_layer_sizes=(5, 2), random_state=1)
